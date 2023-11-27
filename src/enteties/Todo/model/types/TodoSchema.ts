@@ -6,4 +6,5 @@ export interface Todo {
 export interface TodosSchema {
     count: number;
     todos: Todo[];
+
 }

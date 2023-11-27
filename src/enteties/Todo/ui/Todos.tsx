@@ -7,10 +7,10 @@ import {Button} from "../../../shared/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {getTodos} from "../model/selectors/getTodos/getTodos.ts";
 import {getTodosCounter} from "../model/selectors/getTodosCounter/getTodosCounter.ts";
-import {todoActions} from "../model/slice/TodoSlice.tsx";
+import {todoActions} from "../model/slice/TodosSlice.tsx";
 import {TodoElem} from "../../../shared/Todo";
 
-export const Todo = () => {
+export const Todos = () => {
     const dispatch = useDispatch();
     const todos = useSelector(getTodos);
     const todosCount = useSelector(getTodosCounter);

@@ -1,12 +1,12 @@
 import "./styles/App.css"
-import {Todo} from "../enteties/Todo/ui/Todo.tsx";
+import {Todos} from "../enteties/Todo/ui/Todos.tsx";
 
 
 function App() {
 
   return (
     <>
-      <Todo />
+      <Todos />
     </>
   )
 }

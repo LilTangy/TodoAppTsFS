@@ -1,3 +1,3 @@
-export {Todo} from "./ui/Todo.tsx"
-export {todoReducer} from "./model/slice/TodoSlice.tsx"
+export {Todos} from "./ui/Todos.tsx"
+export {todoReducer} from "./model/slice/TodosSlice.tsx"
 export type {TodosSchema} from "./model/types/TodoSchema.ts"
