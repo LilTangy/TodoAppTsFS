@@ -16,6 +16,7 @@ export const counterSlice = createSlice({
             const todo: Todo = {
                 id: String(Math.random() * 100),
                 text: action.payload,
+                type: "open"
             };
             state.todos.push(todo);
             state.count+= 1;
@@ -24,6 +25,13 @@ export const counterSlice = createSlice({
             state.todos = state.todos.filter((todo: Todo) => todo.id !== action.payload)
             state.count -= 1;
         },
+        closeTodo: (state, action) => {
+            state.todos.forEach(item => {
+                if (item.id === action.payload) {
+                    item.type = "close";
+                }
+            })
+        }
     },
 })
 

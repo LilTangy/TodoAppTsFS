@@ -31,6 +31,10 @@ export const Todos = () => {
         dispatch(todoActions.removeTodo(id));
     };
 
+    const closeTodo = (id: string) => {
+        dispatch(todoActions.closeTodo(id))
+    };
+
     return (<>
             <form onSubmit={handleAddTodo} className={cls.Todo}>
         <Input value={todoText} onChange={onChange} />
@@ -41,7 +45,9 @@ export const Todos = () => {
                     todos.map((todo) => (
                         <TodoElem
                             id={todo.id}
+                            key={todo.id}
                             deleteTodo={handleTodoDone}
+                            closeTodo={closeTodo}
                             text={todo.text}
                         ></TodoElem>
                     ))}

@@ -4,10 +4,11 @@ import {Button} from "../../Button";
 
 interface TodoProps {
     id: string;
-    deleteTodo: (id: string) => void
-    text: string
+    deleteTodo: (id: string) => void;
+    closeTodo: (id: string) => void;
+    text: string;
 }
-export const TodoElem = ({id, deleteTodo, text}: TodoProps) => {
+export const TodoElem = ({id, deleteTodo, text, closeTodo}: TodoProps) => {
 
     const handleClick = (id: string) => {
         if (deleteTodo) {
@@ -17,8 +18,9 @@ export const TodoElem = ({id, deleteTodo, text}: TodoProps) => {
 
     return (
         <div className={cls.TodoElem}>
-            <p key={id}>{text}</p>
+            <p>{text}</p>
             <Button type={"button"} onClick={() => handleClick(id)} as={"button"}>delete</Button>
+            <Button type={"button"} onClick={() => closeTodo(id)} as={"button"}>close</Button>
         </div>
     );
 };
